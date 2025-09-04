@@ -16,14 +16,5 @@ JOIN parks_and_recreation.employee_salary s
 GROUP BY d.gender
 ;
 
--- Average Salary by Department --
-
-SELECT p.department_name, ROUND(AVG(s.salary),2) AS avg_salary
-FROM parks_and_recreation.employee_salary s
-JOIN parks_and_recreation.parks_departments p
-    ON department_id = p.department_id
-GROUP BY p.department_name
-ORDER BY avg_salary DESC
-;
 
 
